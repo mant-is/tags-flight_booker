@@ -24,10 +24,12 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
 end
 
