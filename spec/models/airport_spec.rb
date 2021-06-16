@@ -10,6 +10,10 @@
 require 'rails_helper'
 
 RSpec.describe Airport do
+  context 'association' do
+    it { should have_many :inbound_flights }
+    it { should have_many :outbound_flights }
+  end
   context 'validations' do
     it { should validate_presence_of :code }
     it { should validate_length_of(:code).is_equal_to 3  }

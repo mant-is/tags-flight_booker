@@ -1,12 +1,2 @@
-<%= form_with scope: :flight do |form| %>
-  <%= form.label :from_airport, 'From' %>
-  <%= form.select :from_airport %>
-  <%= form.label :to_airport, 'To' %>
-  <%= form.select :to_airport %>
-  <%= form.label :date %>
-  <%= form.date_field :date %>
-  <%= form.label :num_passengers, 'Passengers' %>
-  <%= form.select :num_passengers, 1..4 %>
-  <%= form.submit :Search %>
-<% end %>
+<%= render 'flight_search' %>
 
