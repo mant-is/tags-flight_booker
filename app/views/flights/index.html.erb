@@ -1,2 +1,4 @@
 <%= render 'flight_search' %>
-
+<ul class='flights'>
+  <%= render 'flight_results', flights: @flights if @flights %>
+</ul>

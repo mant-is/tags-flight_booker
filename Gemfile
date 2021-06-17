@@ -18,10 +18,13 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+gem 'database_cleaner', '~> 2.0', '>= 2.0.1', group: :test
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'factory_bot_rails', '~> 6.2'
 end
 
 

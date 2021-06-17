@@ -1,0 +1,7 @@
+<%= form_with scope: :booking, url: flights_path, method: :get, local: true do |form| %>
+  <% flights.each do |flight| %>
+    <%= render flight %>
+  <% end %>
+  <%= form.submit %>
+<% end %>
+

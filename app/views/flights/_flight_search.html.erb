@@ -1,8 +1,8 @@
-<%= form_with scope: :flight, url: flights_path, method: :get  do |form| %>
+<%= form_with scope: :flight, url: flights_path, local: true, method: :get  do |form| %>
   <%= form.label :from_airport, 'From' %>
-  <%= form.select :from_airport, Airport.all.map(&:code).uniq.sort %>
+  <%= form.select :from_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort %>
   <%= form.label :to_airport, 'To' %>
-  <%= form.select :to_airport, Airport.all.map(&:code).uniq.sort %>
+  <%= form.select :to_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort %>
   <%= form.label :start %>
   <%= form.select :start, Flight.all.map { |d| d.start.strftime("%m/%d/%Y")}.uniq.sort %>
   <%= form.label :num_passengers, 'Passengers' %>

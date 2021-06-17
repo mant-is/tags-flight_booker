@@ -1,0 +1,9 @@
+<%= content_tag :li, flight, id: "flight_#{ flight.id }" do %>
+  <%= radio_button_tag :flight, flight.id %>
+  <%= flight.from_airport.code %>
+  &Rightarrow;
+  <%= flight.to_airport.code %>
+  &#65292;
+  <%= flight.start.strftime('%m/%d/%Y') %>
+<% end %>
+
