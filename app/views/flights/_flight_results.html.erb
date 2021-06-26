@@ -1,7 +1,10 @@
-<%= form_with scope: :booking, url: flights_path, method: :get, local: true do |form| %>
   <% flights.each do |flight| %>
     <%= render flight %>
+    <%= button_to 'Add passenger details',
+          new_booking_path,
+          method: :get,
+          params: { flight_id: flight.id,
+                    num_passengers: params[:flight][:num_passengers] },
+          id: 'booking_button' %>
   <% end %>
-  <%= form.submit 'Add passenger details' %>
-<% end %>
 

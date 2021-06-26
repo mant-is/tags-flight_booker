@@ -1,0 +1,39 @@
+<h1>Booking <%= @booking.id %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Flight</th>
+      <th>Date</th>
+      <th>To</th>
+      <th>From</th>
+      <th>Duration</th>
+      <th>Passengers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @booking.flight.id %></td> 
+      <td><%= @booking.flight.start.strftime("%m/%d/%Y") %></td> 
+      <td><%= @booking.flight.to_airport.code %></td> 
+      <td><%= @booking.flight.from_airport.code %></td> 
+      <td><%= @booking.flight.duration %></td> 
+      <td><%= @booking.passengers.count %></td> 
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @booking.passengers.each do |passenger| %>
+      <tr>
+        <td><%= passenger.name %></td>
+        <td><%= passenger.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
