@@ -1,10 +1,13 @@
-  <% flights.each do |flight| %>
-    <%= render flight %>
-    <%= button_to 'Add passenger details',
-          new_booking_path,
-          method: :get,
-          params: { flight_id: flight.id,
-                    num_passengers: params[:flight][:num_passengers] },
-          id: 'booking_button' %>
-  <% end %>
-
+<div class="results">
+  <h1>We found <%= flights.count %> flights for you.</h1>
+  <ul>
+    <% flights.each do |flight| %>
+      <%= render flight %>
+      <%= button_to 'Add passenger details',
+            new_booking_path,
+            method: :get,
+            class: 'btn-add',
+            params: { flight_id: flight.id,
+                      num_passengers: params[:flight][:num_passengers] } %>   <% end %>
+  </ul>
+</div>

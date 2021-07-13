@@ -34,5 +34,6 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'letter_opener', '~> 1.7'
 end
 

@@ -1,12 +1,4 @@
 class BookingsController < ApplicationController
-  def create
-    @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to root_path #redirect_to booking_path(@booking)
-    else
-      render :new
-    end
-  end
 
   def new
     @booking = Booking.new
@@ -17,6 +9,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+      PassengerMailer.with(booking: @booking.id).booking_confirmation.deliver_now
       redirect_to booking_path @booking
     else
       render :new

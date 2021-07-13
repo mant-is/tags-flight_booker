@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.route {
+  /*border: 3px steelblue dashed;*/
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 15rem;
+  margin: 0 1.5rem 0 1.5rem;
+  width: 12rem;
+
+  select {
+    border-radius: .25rem;
+  }
+}
+.search {
+  display: flex;
+  flex: 0 0 15rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  
+  input {
+    width: 25%;
+    height: 2.666666666rem;
+    border-radius: .25rem;
+  }
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 0 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    
+    li {
+      margin: .5rem 0 0 0;
+    } 
+
+    form {
+      align-self: flex-end;
+
+      input {
+        border-radius: .25rem;
+        height: 2.333333333rem;
+        padding: 0 .5rem;
+        color: #FFF;
+        background-color: dodgerblue;
+      }
+    }
+  }
+}
+
+.new-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #3A3F47;
+  }
+
+  form {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn-book {
+      border-radius: .25rem;
+      background-color: #7AD9C6;
+      color: #3A3F47;
+      width: 15rem;
+      align-self: center;
+      margin: 2rem 0 0 0;
+      height: 2.666666666rem;
+    }
+
+    input[type='text'] {
+      border-radius: .25rem;
+      margin: 1rem 0;
+      width: 20rem;
+    }
+  }
+}
+
+

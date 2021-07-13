@@ -1,4 +1,4 @@
-<%= render 'flight_search' %>
-<ul class='flights'>
+<div class="wrapper">
+  <%= render 'flight_search' %>
   <%= render 'flight_results', flights: @flights if @flights.present? %>
-</ul>
+</div>

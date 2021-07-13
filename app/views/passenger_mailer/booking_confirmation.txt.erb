@@ -1,0 +1,5 @@
+Booking Confirmation for Flight <%= @booking.flight.id %>
+
+From: <%= Airport.find(@booking.flight.from_airport_id).code %>
+To: <%= Airport.find(@booking.flight.to_airport_id).code %>
+Date: <%= @booking.flight.start.strftime("%m/%d/%Y")%>
