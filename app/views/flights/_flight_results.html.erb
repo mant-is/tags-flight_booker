@@ -1,5 +1,5 @@
 <div class="results">
-  <h1>We found <%= flights.count %> flights for you.</h1>
+  <h1>We found <%= flights.count %> <%= 'flight'.pluralize(flights.count) %> for you.</h1>
   <ul>
     <% flights.each do |flight| %>
       <%= render flight %>

@@ -1,22 +1,22 @@
 <%= form_with scope: :flight, url: flights_path, local: true, method: :get do |form| %>
   <div class="route">
     <div class="selection">
-      <p><%= form.label :from_airport, :From %></p>
-      <%= form.select :from_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort %>
+      <%= form.label :from_airport, :From %>
+      <%= form.select :from_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort, {}, class: 'select-css' %>
     </div>
     <div class="selection date">
-      <p><%= form.label :Date %></p>
-      <%= form.select :start, Flight.all.map { |d| d.start.strftime("%m/%d/%Y")}.uniq.sort %>
+      <%= form.label :Date %>
+      <%= form.select :start, Flight.all.map { |d| d.start.strftime("%m/%d/%Y")}.uniq.sort, {}, class: 'select-css' %>
     </div>
   </div>
   <div class="route">
     <div class="selection">
-      <p><%= form.label :to_airport, :To %></p>
-      <%= form.select :to_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort %>
+      <%= form.label :to_airport, :To %>
+      <%= form.select :to_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort, {}, class: 'select-css' %>
     </div>
     <div class="selection passengers">
-      <p><%= form.label :num_passengers, :Passengers %></p>
-      <%= form.select :num_passengers, 1..4 %>
+      <%= form.label :num_passengers, :Passengers %>
+      <%= form.select :num_passengers, 1..4, {}, class: 'select-css' %>
     </div>
   </div>
   <div class="search">

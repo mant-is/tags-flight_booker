@@ -9,5 +9,10 @@
   From: <%= Airport.find(Flight.find(@booking.flight_id).from_airport_id).code %>
   To: <%= Airport.find(Flight.find(@booking.flight_id).to_airport_id).code %>
   Date: <%= Flight.find(@booking.flight_id).start.strftime("%m/%d/%Y") %>
+  Passenger: 
+    <% @booking.passengers.to_a.each do |passenger| %>
+      <span><%= passenger.name %></span>
+      <%= mail_to passenger.email, passenger.email %>
+    <% end %>
 </body>
 </html>

@@ -1,0 +1,45 @@
+.new-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  font-family: system-ui;
+  
+  h2, h5 {
+    align-self: center-start;
+    font-size: 1.5rem;
+    color: #3A3F47;
+    font-weight: 550;
+    margin: 2rem 0; 
+  }
+
+  form {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+
+    .btn-book {
+      border-radius: .25rem;
+      border: none;
+      background-color: #7AD9C6;
+      color: #3A3F47;
+      font-size: 1.25rem;
+      width: 15rem;
+      align-self: center;
+      margin: 2rem 0 0 0;
+      height: 2.666666666rem;
+    }
+
+    input[type='text'] {
+      border-radius: .25rem;
+      font-size: 1.25rem;
+      margin: 1rem 0;
+      width: 92.5%;
+      height: 2rem;
+    }
+  }
+}
+
+
