@@ -1,24 +1,7 @@
-# README
+### Flight Booker App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###### Search for a flight and create your booking.
 
-Things you may want to cover:
+===
+This toy project was used for learning more about both tdd and styling layouts using flexbox.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

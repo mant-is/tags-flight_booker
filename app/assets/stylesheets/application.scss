@@ -4,9 +4,34 @@
 **/
 
 
+body {
+  background-color: #FFFDFF;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  font-family: system-ui;
+}
+
+.main-header {
+  display: grid;
+  //grid-template-columns: [logo] 35vw [spacer] auto [list-menu] 20vw;
+  justify-items: center;
+  border: 1px white solid;
+  border-top: none;
+  border-radius: .15rem;
+  height: 60px;
+  width: 100%;
+  background-color: #FF9A8B;
+  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 68%, #FF99AC 100%);
+  font-weight: 800;
+  font-size: 2rem;
+
+  h3 {
+    display: inline;
+    margin: .25em 0 0 0;
+  }
 }
 
