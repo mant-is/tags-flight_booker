@@ -117,4 +117,15 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  #
+  # 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               ENV['MY_DOMAIN'],
+    user_name:            ENV['GMAIL_USERNAME'],
+    password:             ENV['FLIGHT_BOOKER_2FA_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true }
 end
