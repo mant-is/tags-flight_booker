@@ -18,7 +18,7 @@ RSpec.feature 'user create a new booking' do
     fill_in 'Name', with: joe_doe.name
     fill_in 'Email', with: joe_doe.email
     click_button 'Book flight'
-    expect(page).to have_css 'h1', text: "Booking #{ jfk_to_sfo.id }"
+    expect(page).to have_css 'h1.booking-header', text: "Booking #{ jfk_to_sfo.id }"
     expect(page).to have_content joe_doe.name
     expect(page).to have_content jfk_to_sfo.duration
   end

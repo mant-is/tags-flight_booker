@@ -2,7 +2,7 @@
   <h1 class="booking-header">Booking <%= @booking.id %></h1>
   <div class='booking-details'>
     <p>You have successfully created your booking for Flight <%= @booking.flight.id %> from <%= Airport.find(@booking.flight.from_airport_id).code %> to <%= Airport.find(@booking.flight.to_airport_id).code %></p>
-    <p>The flight departs at <%= @booking.flight.start.strftime('%l:%M %P') %> with an expected duration of <%= distance_of_time_in_words(@booking.flight.start, @booking.flight.start + @booking.flight.duration )%></p>
+    <p>The flight departs at <%= @booking.flight.start.strftime('%l:%M %P') %> with an expected duration of <%= @booking.flight.humanize_time_long %></p>
     <p>
       You have reserved <%= @booking.passengers.count %> <%= 'seat'.pluralize(@booking.passengers.count) %> for
       <% @booking.passengers.each do |passenger, i = 1| %>

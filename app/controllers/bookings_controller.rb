@@ -12,6 +12,8 @@ class BookingsController < ApplicationController
       # PassengerMailer.with(booking: @booking.id).booking_confirmation.deliver_now
       redirect_to booking_path @booking
     else
+      flash.now[:alert] = @booking.errors.full_messages
+      @flight = Flight.find(params[:booking][:flight_id])
       render :new
     end
   end
@@ -24,4 +26,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:flight_id, passengers_attributes: [:id, :name, :email])
   end
+
 end

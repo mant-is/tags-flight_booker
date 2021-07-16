@@ -12,9 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class='main-header'>          
-      <h3>Flight Booker</h3>
-    </header>
+    <a href='/'>
+      <header class='main-header'>          
+        <h3>Flight Booker</h3>
+      </header>
+    </a>
+    <% flash.each do |type, message| %>
+      <%= message %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
