@@ -1,0 +1,17 @@
+.flash-messages {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+
+  .flash-text {
+    display: flex;
+    justify-content: center;
+    background: mistyrose;
+    border-radius: .35rem;
+    width: 40vw;
+    margin: 2rem 0 0 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: orangered;
+  }
+}

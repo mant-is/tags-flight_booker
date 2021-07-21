@@ -12,7 +12,8 @@ class BookingsController < ApplicationController
       # PassengerMailer.with(booking: @booking.id).booking_confirmation.deliver_now
       redirect_to booking_path @booking
     else
-      flash.now[:alert] = @booking.errors.full_messages
+      flash.now[:alert] = ''
+      flash[:alert] = @booking.errors.full_messages.join(', ')
       @flight = Flight.find(params[:booking][:flight_id])
       render :new
     end

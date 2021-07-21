@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <a href='/'>
@@ -17,9 +17,13 @@
         <h3>Flight Booker</h3>
       </header>
     </a>
-    <% flash.each do |type, message| %>
-      <%= message %>
-    <% end %>
+    <div class='flash-messages'>
+      <div class='flash-text'>
+        <% flash.each do |type, message| %>
+           <%= content_tag :p, message, class: type %>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

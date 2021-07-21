@@ -4,6 +4,4 @@ class Booking < ApplicationRecord
   has_many :passengers, through: :passenger_bookings, inverse_of: :bookings
 
   accepts_nested_attributes_for :passengers
-
-  validates_associated :passengers, :flight
 end
