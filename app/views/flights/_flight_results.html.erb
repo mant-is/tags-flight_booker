@@ -1,6 +1,5 @@
 <div class="results">
-  <% if flights.blank? %>
-  <% else %>
+  <% if flights %>
     <h1>We found <%= flights.count %> <%= 'flight'.pluralize(flights.count) %> for you.</h1>
     <ul>
       <% flights.each do |flight| %>

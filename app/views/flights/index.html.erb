@@ -1,5 +1,4 @@
-<div class="wrapper">
+<div class='wrapper'>
   <%= render 'flight_search' %>
-  <%= render 'flight_results', flights: @flights if @flights.present? %>
-  <%= render html: tag.h2('There are no available flights for your selection. Try another search.', class: 'no-flight-results') if @flights.blank? %>
+  <%= render 'flight_results', flights: @flights %>
 </div>
