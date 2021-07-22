@@ -20,7 +20,7 @@ RSpec.feature 'user creates a new booking' do
     click_button 'Book flight'
     expect(page).to have_css 'h1.booking-header', text: "Booking #{ jfk_to_sfo.id }"
     expect(page).to have_content joe_doe.name
-    expect(page).to have_content jfk_to_sfo.humanize_time_long
+    expect(page).to have_content jfk_to_sfo.humanize_duration_long
   end
 
   scenario 'unsuccessfully' do 
