@@ -19,15 +19,16 @@ RSpec.describe Flight do
   end
 
   let(:new_york) { create(:airport, :new_york) }
+
   let(:san_fran) { create(:airport, :san_francisco) }
   let(:flight) { create(:flight, from_airport: new_york, to_airport: san_fran) }
 
   it 'should humanize the flight duration' do
-    expect(flight.humanize_time).to eq '6h50m'
+    expect(flight.humanize_duration).to eq '6h50m'
   end
 
   it 'should long humanize the flight duration' do
-    expect(flight.humanize_time_long).to eq '6 hours and 50 minutes'
+    expect(flight.humanize_duration_long).to eq '6 hours and 50 minutes'
   end
 
 end
