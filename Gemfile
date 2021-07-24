@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 gem 'database_cleaner', '~> 2.0', '>= 2.0.1', group: :test
+gem 'draper', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do
   gem 'rspec-rails'
