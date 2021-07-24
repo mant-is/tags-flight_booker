@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  decorates_assigned :booking
 
   def new
     @booking = Booking.new
