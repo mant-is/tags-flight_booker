@@ -1,18 +1,18 @@
-.show-booking {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+//.show-booking {
+//  display: grid;
+//  grid-template-columns: 1fr;
+//  grid-template-rows: 1fr;
 
-  .booking-header {
-    grid-area: header;
-    grid-column: 1 / 3;
-    grid-row: 1 / 2; 
-  }
+//  .booking-header {
+//    grid-area: header;
+//    grid-column: 1 / 3;
+//    grid-row: 1 / 2; 
+//  }
 
-  .booking-details {
-    p { 
-      padding: .5rem 0;
-    }
-  }
-}
+//  .booking-details {
+//    p { 
+//      padding: .5rem 0;
+//    }
+//  }
+//}
 

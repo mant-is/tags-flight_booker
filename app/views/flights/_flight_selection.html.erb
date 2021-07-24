@@ -1,5 +1,6 @@
-<%= content_tag :span, flight, id: "flight_#{ flight.id }" do %>
+<%= content_tag :li, flight, id: "flight_#{ flight.id }" do %>
     <label style="vertical-align: middle">
+      <%= radio_button_tag :flight, flight.id %>
       <%= flight.from_airport.code %>
       &Rightarrow;
       <%= flight.to_airport.code %>
