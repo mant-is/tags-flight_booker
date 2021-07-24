@@ -24,4 +24,9 @@ class BookingDecorator < Draper::Decorator
   def total_passengers
     object.passengers.count
   end
+
+  def total_passengers_a
+    object.passengers.to_a.count
+  end
+
 end

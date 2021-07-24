@@ -1,7 +1,7 @@
 <div class="new-booking">
-   <h2>Add <%= @booking.passengers.to_a.count == 1 ? "passenger" : "passengers'" %> name and email to book your flight</h2>
+  <h2>Add <%= booking.total_passengers_a == 1 ? "passenger" : "passengers'" %> name and email to book your flight</h2>
   <%= render 'flights/flight', flight: @flight  %>
-  <%= form_with model: @booking, local: true do |form| %>
+  <%= form_with model: booking, local: true do |form| %>
     <%= form.hidden_field :flight_id, value: @flight.id %>
     <%= form.fields_for :passengers do |passengers_form| %>
       <%= passengers_form.hidden_field :id, value: nil %>
