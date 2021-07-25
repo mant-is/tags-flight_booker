@@ -2,10 +2,10 @@
   <h1 class='booking-header'>Booking <%= booking.id %></h1>
   <div class='booking-details'>
     <p>You have successfully created your booking for Flight <%= booking.flight_id %> from <%= booking.from_airport %> to <%= booking.to_airport %>
-    <p>The flight departs at <%= booking.departure %> with an expected duration of <%= booking.duration %></p>
+    <p>The flight departs at <%= booking.flight.leaves_at %> with an expected duration of <%= booking.duration %></p>
     <p> 
       You reserved <%= booking.total_passengers %> <%= 'seat'.pluralize(booking.total_passengers) %> for
-      <% @booking.passengers.each do |passenger, i = 1| %>
+      <% booking.passengers.each do |passenger, i = 1| %>
         <span><%= passenger.name %></span>
         <%= tag.span(' and ') if booking.total_passengers > 1 and passenger != booking.passengers.last %>
       <% end %>
