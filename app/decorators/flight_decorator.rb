@@ -1,0 +1,3 @@
+class FlightDecorator < ApplicationDecorator
+    
+end

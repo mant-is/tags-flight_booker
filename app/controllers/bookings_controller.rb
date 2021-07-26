@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  decorates_assigned :booking
+  decorates_assigned :booking, :flight
 
   def new
     @booking = Booking.new
@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
       redirect_to booking_path @booking
     else
       flash.now[:alert] = ''
-      flash[:alert] = @booking.errors.full_messages.join(', ')
+      flash.now.alert = @booking.errors.full_messages.join(', ')
       @flight = Flight.find(params[:booking][:flight_id])
       render :new
     end

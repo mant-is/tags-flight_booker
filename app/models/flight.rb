@@ -25,8 +25,4 @@ class Flight < ApplicationRecord
     "#{hours}" + " #{ 'hours'.pluralize } " + "and" + " #{minutes} " + "#{ 'minutes'.pluralize }" 
   end
 
-  def leaves_at
-    read_attribute(:leaves_at).strftime('%l:%M %p')
-  end
-
 end

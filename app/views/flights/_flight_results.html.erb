@@ -3,13 +3,14 @@
     <h1>We found <%= flights.count %> <%= 'flight'.pluralize(flights.count) %> for you.</h1>
     <ul>
       <% flights.each do |flight| %>
-        <%= render flight %>
+        <%= render 'flight_selection', flight: flight %>
         <%= button_to 'Add passenger details',
             new_booking_path,
             method: :get,
             class: 'btn-add',
             params: { flight_id: flight.id,
-                      num_passengers: params[:flight][:num_passengers] } %>   <% end %>
+                      num_passengers: params[:flight][:num_passengers] } %>  
+      <% end %>
     </ul>
   <% end %>
 </div>

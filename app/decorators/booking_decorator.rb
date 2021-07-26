@@ -1,4 +1,4 @@
-class BookingDecorator < Draper::Decorator
+class BookingDecorator < ApplicationDecorator
   delegate_all
 
   def flight_id
