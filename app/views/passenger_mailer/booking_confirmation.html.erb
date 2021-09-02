@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-  <h2>Booking Confirmation for Flight <%= @booking.flight_id%></h2>
-  From: <%= Airport.find(Flight.find(@booking.flight_id).from_airport_id).code %>
-  To: <%= Airport.find(Flight.find(@booking.flight_id).to_airport_id).code %>
-  Date: <%= Flight.find(@booking.flight_id).start.strftime("%m/%d/%Y") %>
-  Passenger: 
-    <% @booking.passengers.to_a.each do |passenger| %>
-      <span><%= passenger.name %></span>
-      <%= mail_to passenger.email, passenger.email %>
-    <% end %>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Booking Confirmation for Flight <%= @booking.flight_id%></h2>
+    From: <%= Airport.find(Flight.find(@booking.flight_id).from_airport_id).code %><br>
+    To: <%= Airport.find(Flight.find(@booking.flight_id).to_airport_id).code %><br>
+    Date: <%= Flight.find(@booking.flight_id).start.strftime("%m/%d/%Y") %><br>
+    Passenger: 
+      <% @booking.passengers.to_a.each do |passenger| %>
+        <span><%= passenger.name %></span>
+        <%= mail_to passenger.email, passenger.email %>
+      <% end %>
+  </body>
 </html>

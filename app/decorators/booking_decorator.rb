@@ -29,4 +29,7 @@ class BookingDecorator < ApplicationDecorator
     object.passengers.to_a.count
   end
 
+  def takeoff
+    Flight.find(flight_id).leaves_at.strftime("%l:%M %P")
+  end
 end
