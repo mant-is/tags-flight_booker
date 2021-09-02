@@ -3,17 +3,17 @@
   <div class="route">
     <div class="selection">
       <%= form.label :from_airport, :From %>
-      <%= form.select :from_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort, {}, class: 'select-css' %>
+      <%= form.select :from_airport, airport_select, {}, class: 'select-css' %>
     </div>
     <div class="selection date">
       <%= form.label :Date %>
-      <%= form.select :start, Flight.all.map { |d| d.start.strftime("%m/%d/%Y")}.uniq.sort, {}, class: 'select-css' %>
+      <%= form.select :start, date_select, {}, class: 'select-css' %>
     </div>
   </div>
   <div class="route">
     <div class="selection">
       <%= form.label :to_airport, :To %>
-      <%= form.select :to_airport, Airport.all.map { |a| [a.code, a.id] }.uniq.sort, {}, class: 'select-css' %>
+      <%= form.select :to_airport, airport_select, {}, class: 'select-css' %>
     </div>
     <div class="selection passengers">
       <%= form.label :num_passengers, :Passengers %>
