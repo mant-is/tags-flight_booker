@@ -1,0 +1,11 @@
+<%= form_with scope: :booking, url: search_bookings_path, method: :get do |form| %>
+  <%= form.label :confirmation_number, 'Enter your confirmation number' %>
+  <%= form.text_field :confirmation_number %>
+  <%= form.submit :Search %>
+<% end %>
+
+<% if booking_exists? %>
+
+  <%= @result.inspect %>
+  
+<% end %>

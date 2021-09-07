@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root 'flights#index'
   resources :flights, only: :index
-  resources :bookings, only: [:create, :new, :show]
+  resources :bookings, only: %i[create new show] do
+    get 'search', on: :collection
+  end
+
+  root 'flights#index'
 end
 

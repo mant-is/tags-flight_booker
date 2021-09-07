@@ -4,7 +4,7 @@
     <ul>
       <% flights.each do |flight| %>
         <%= render 'flight_selection', flight: flight %>
-        <%= button_to 'Add passenger details',
+        <%= button_to 'Add passengers',
             new_booking_path,
             method: :get,
             class: 'btn-add',

@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   decorates_assigned :booking, :flight
 
+  def index
+
+  end
+
   def new
     @booking = Booking.new
     params[:num_passengers].to_i.times { @booking.passengers.build }
@@ -24,9 +28,14 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def search
+    @result = Booking.where(confirmation_number: params[:confirmation_number])
+  end
+
+
   private
   def booking_params
-    params.require(:booking).permit(:flight_id, passengers_attributes: [:id, :name, :email])
+    params.require(:booking).permit(:flight_id, :confirmation_number, passengers_attributes: [:id, :name, :email])
   end
 
 end

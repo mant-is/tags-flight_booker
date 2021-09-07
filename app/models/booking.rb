@@ -13,4 +13,11 @@ class Booking < ApplicationRecord
   has_many :passengers, through: :passenger_bookings, inverse_of: :bookings
 
   accepts_nested_attributes_for :passengers
+
+  def self.search(query)
+    return unless query
+
+    Booking.where(confirmation_number: query)
+  end
+
 end
